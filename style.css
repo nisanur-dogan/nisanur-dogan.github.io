@@ -1,0 +1,410 @@
+/* ==========================================================================
+   T E M E L  D E Ğ İ Ş K E N L E R  V E  S İ B E R  M İ M A R İ
+   ========================================================================== */
+:root {
+    --bg-deep: #050508;        /* Derin mat siyah */
+    --panel-dark: #0b0b10;     /* Slaytların oturduğu koyu zemin */
+    --text-light: #e2e8f0;     /* Platin gümüşü metin */
+    --text-dark: #64748b;      /* Fırçalanmış çelik gri */
+    --lila-neon: #d6b4fc;      /* Ersağundan farklı, daha canlı metalik lila */
+    --lila-glow: rgba(214, 180, 252, 0.15);
+    --border-line: rgba(214, 180, 252, 0.08);
+    --glass-card: rgba(14, 14, 20, 0.75); /* Cam efekti için yarı saydam */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   A N İ M A S Y O N L U  A R K A  P L A N  I Ş I K L A R I (Seni Ayıran Özellik)
+   ========================================================================== */
+.ambient-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -1;
+    opacity: 0.12;
+    animation: pulseGlow 8s infinite ease-in-out;
+}
+
+.orb-lila {
+    top: -10%; right: -5%; width: 550px; height: 550px;
+    background: var(--lila-neon);
+}
+
+.orb-silver {
+    bottom: -5%; left: -5%; width: 450px; height: 450px;
+    background: #bdc3c7;
+    animation-delay: 4s; /* Işıkların çapraz hareket etmesi için gecikme */
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.08; }
+    50% { transform: scale(1.15) translate(30px, -20px); opacity: 0.15; }
+}
+
+/* ==========================================================================
+   S İ S T E M  Y Ü K L E M E  G İ R İ Ş  E K R A N I (BOOT GATE)
+   ========================================================================== */
+#boot-gate {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100vh;
+    background-color: #030305;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gate-terminal-box {
+    width: 90%;
+    max-width: 550px;
+    background-color: #08080c;
+    border: 1px solid rgba(214, 180, 252, 0.2);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.9), 0 0 30px var(--lila-glow);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.terminal-bar {
+    background-color: #0e0e13;
+    padding: 14px;
+    display: flex;
+    gap: 7px;
+    border-bottom: 1px solid var(--border-line);
+}
+
+.bar-dot { width: 11px; height: 11px; border-radius: 50%; }
+.d-red { background-color: #ff5f56; }
+.d-yellow { background-color: #ffbd2e; }
+.d-green { background-color: #27c93f; }
+
+.gate-body {
+    padding: 30px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text-light);
+}
+
+.blink-text {
+    color: var(--lila-neon) !important;
+    font-weight: 700;
+    animation: siberBlink 1.4s infinite;
+}
+
+@keyframes siberBlink { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+#portfolio-scroll-wrapper { display: none; }
+
+/* ==========================================================================
+   S İ B E R  T İ T R E M E  A N İ M A S Y O N U (Flicker)
+   ========================================================================== */
+.dynamic-flicker {
+    animation: eliteFlicker 2s ease-out;
+}
+
+@keyframes eliteFlicker {
+    0% { opacity: 0; text-shadow: none; }
+    30% { opacity: 0.5; text-shadow: 0 0 10px var(--lila-neon); }
+    32% { opacity: 0.2; text-shadow: none; }
+    35% { opacity: 0.8; text-shadow: 0 0 15px var(--lila-neon); }
+    38% { opacity: 0.3; text-shadow: none; }
+    45% { opacity: 1; text-shadow: 0 0 10px var(--lila-neon); }
+}
+
+/* ==========================================================================
+   Ü S T  N A V İ G A S Y O N
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(5,5,8,0.7), transparent);
+    backdrop-filter: blur(10px);
+}
+
+.cyber-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid var(--border-line); /* Etrafına gümüş/lila ince bir çerçeve */
+    padding: 5px 12px;
+    border-radius: 4px; /* Hafif yumuşatılmış köşeler */
+    background: rgba(255, 255, 255, 0.02); /* İçine çok hafif cam şeffaflığı */
+}
+.cyber-logo span { color: var(--lila-neon); text-shadow: 0 0 10px var(--lila-neon); }
+
+.top-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+.top-nav a:hover { color: var(--lila-neon); }
+
+/* ==========================================================================
+   S L A Y T L A R I N  A K I Ş I
+   ========================================================================== */
+.slide-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.alternate-bg { background-color: var(--panel-dark); }
+.padding-slide { padding: 100px 8%; }
+.slide-num { font-family: monospace; font-size: 12px; color: var(--lila-neon); letter-spacing: 2px; display: block; margin-bottom: 15px; }
+
+/* Slayt 1 */
+.main-title { font-family: 'Space Grotesk', sans-serif; font-size: 60px; font-weight: 700; line-height: 1.1; color: #fff; letter-spacing: -1.5px; }
+.slide-content-center { text-align: center; }
+.slide-subtitle { font-size: 17px; color: var(--text-dark); margin-top: 20px; }
+.scroll-indicator { margin-top: 50px; font-size: 12px; color: var(--text-dark); animation: bnc 2s infinite; }
+@keyframes bnc { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+/* Slayt 2 (Buzlu Cam Efektli Kart) */
+.slide-grid-two { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: center; max-width: 1200px; width: 100%; }
+.slide-avatar { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; border: 2px solid var(--lila-neon); box-shadow: 0 0 25px var(--lila-glow); }
+.slide-text-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 36px; color: #fff; margin-bottom: 20px; }
+
+.glass-slide-card {
+    background: var(--glass-card);
+    backdrop-filter: blur(15px); /* Gerçek buzlu cam dokusu */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-line);
+    padding: 35px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.glass-slide-card p { margin-bottom: 12px; }
+
+/* Slayt 3 (Proje Kartları) */
+.slide-content-full { width: 100%; max-width: 1200px; }
+.slide-heading-center { font-family: 'Space Grotesk', sans-serif; font-size: 36px; color: #fff; text-align: center; margin-bottom: 10px; }
+.slide-desc-center { text-align: center; color: var(--text-dark); margin-bottom: 45px; font-size: 14px; }
+.slide-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+.slide-project-card {
+    background-color: rgba(5,5,8,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-line);
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.card-neon-strip { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background-color: transparent; transition: background-color 0.3s; }
+.slide-project-card:hover { border-color: rgba(214, 180, 252, 0.3); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(214, 180, 252, 0.05); }
+.slide-project-card:hover .card-neon-strip { background-color: var(--lila-neon); }
+.card-num { font-family: monospace; font-size: 15px; color: var(--text-dark); margin-bottom: 10px; }
+.slide-project-card h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+.slide-project-card p { color: var(--text-light); font-size: 14px; line-height: 1.6; margin-bottom: 15px; height: 70px; overflow: hidden; }
+
+.card-tags span {
+    display: inline-block; background: rgba(214, 180, 252, 0.04); color: var(--lila-neon);
+    border: 1px solid rgba(214, 180, 252, 0.15); padding: 3px 10px; font-size: 11px; border-radius: 4px; margin-right: 6px; font-weight: 600;
+}
+.card-action-btn { display: inline-block; margin-top: 20px; color: var(--lila-neon); text-decoration: none; font-size: 13px; font-weight: 600; }
+
+/* Slayt 4 (Yetenekler) */
+.slide-skills-container { display: flex; gap: 25px; flex-wrap: wrap; }
+.slide-skill-box { flex: 1; min-width: 300px; background: var(--glass-card); backdrop-filter: blur(10px); border: 1px solid var(--border-line); padding: 35px; border-radius: 12px; position: relative; overflow: hidden; }
+.box-line { position: absolute; top: 0; left: 0; width: 100%; height: 2px; }
+.lila-line { background: var(--lila-neon); }
+.silver-line { background: var(--text-dark); }
+.slide-skill-box h3 { font-size: 19px; color: #fff; margin-bottom: 15px; }
+.slide-skill-box ul { list-style-position: inside; color: var(--text-light); font-size: 14px; }
+.slide-skill-box ul li { margin-bottom: 8px; }
+
+/* Slayt 5 (Evrak Alanı) */
+.slide-cv-container { display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto; }
+.slide-cv-tile { display: flex; align-items: center; background: rgba(255, 255, 255, 0.01); border: 1px solid var(--border-line); padding: 20px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden; }
+.slide-cv-tile.lila-border { border-left: 3px solid var(--lila-neon); }
+.tile-icon { font-size: 22px; margin-right: 20px; }
+.tile-details h4 { color: #fff; font-size: 15px; }
+.tile-details span { color: var(--text-dark); font-size: 12px; }
+.tile-arrow { margin-left: auto; color: var(--text-dark); font-size: 16px; }
+.slide-cv-tile:hover { border-color: rgba(214, 180, 252, 0.2); transform: translateX(4px); }
+
+/* Slayt 6 */
+.slide-contact-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+.slide-contact-button { background: var(--panel-dark); border: 1px solid var(--border-line); padding: 15px 25px; border-radius: 30px; text-decoration: none; color: var(--text-light); font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
+.slide-contact-button:hover { border-color: var(--lila-neon); background: rgba(214,180,252,0.02); }
+.slide-footer { text-align: center; color: #2e3138; font-family: monospace; font-size: 11px; border-top: 1px solid var(--border-line); padding-top: 25px; }
+
+/* Shimmer Efekti */
+.shm-effect::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent); transition: left 0.6s; }
+.shm-effect:hover::after { left: 100%; }
+
+/* ==========================================================================
+   M O B İ L  R E S P O N S İ V E
+   ========================================================================== */
+@media (max-width: 968px) {
+    .main-header { padding: 20px 5%; }
+    .top-nav { display: none; }
+    .padding-slide { padding: 80px 20px; }
+    .main-title { font-size: 34px; }
+    .slide-grid-two { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .slide-avatar { width: 160px; height: 160px; }
+    .glass-slide-card { padding: 20px; font-size: 14px; }
+    .slide-cards-grid { grid-template-columns: 1fr; }
+    .slide-skills-container { flex-direction: column; }
+    .slide-contact-grid { flex-direction: column; }
+    .slide-contact-button { width: 100%; justify-content: center; }
+}
+/* ==========================================================================
+   İLETİŞİM BUTONLARI - PUSLU BEYAZ IŞIK VE BULANIKLIK (HOVER) EFEKTİ
+   ========================================================================== */
+.slide-contact-button {
+    background: var(--panel-dark);
+    border: 1px solid var(--border-line);
+    padding: 18px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    /* Pürüzsüz geçiş animasyonu */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+/* Fareyle üzerine gelindiğinde (Hover) Beyaz Puslu Işık Patlaması */
+.slide-contact-button:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4); /* Çerçeve hafif beyaza döner */
+    background: rgba(255, 255, 255, 0.03);  /* İç kısım hafifçe aydınlanır */
+    
+    /* İstediğin puslu beyaz parlama ve bulanıklık efekti */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    transform: translateY(-2px); /* Hafif yukarı kalkma animasyonu */
+}
+
+/* ==========================================================================
+   FOOTER (TELİF HAKKI) - EN ALTA SABİTLEME DÜZENİ
+   ========================================================================== */
+.slide-footer {
+    text-align: center;
+    color: #3a3f47; /* Görseldeki gibi mat füme/gri tonu */
+    font-family: monospace;
+    font-size: 11px;
+    
+    /* Düzenleme ve Konumlandırma */
+    border-top: 1px solid var(--border-line);
+    padding-top: 30px;
+    margin-top: 80px; /* İletişim butonlarının altına sağlam bir mesafe açar */
+    width: 100%;
+}
+/* Giriş ekranı kutusu için üst çizgi düzeltmesi */
+.gate-terminal-box {
+    border-top: 3px solid var(--lila-neon) !important; /* Işıklar yerine şık neon bir üst şerit */
+}
+
+/* Logonun link özelliğinden dolayı renginin bozulmasını engelleme */
+.cyber-logo, .cyber-logo:hover, .cyber-logo:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+/* Giriş ekranı kodlarını tamamen kapatıyoruz */
+#boot-gate {
+    display: none !important;
+}
+
+/* Sitenin direkt görünür olmasını sağlıyoruz */
+body {
+    overflow-y: auto !important;
+}
+
+/* Mouse ile üstüne gelindiğinde (Hover) Beyaz Puslu Işık Patlaması */
+.slide-contact-button:hover {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15) !important; 
+    backdrop-filter: blur(10px) !important; 
+    -webkit-backdrop-filter: blur(10px) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Footer tam olarak en altta kalacak şekilde boşluk ayarı */
+.slide-footer {
+    text-align: center;
+    color: #3a3f47;
+    font-family: monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border-line);
+    padding-top: 30px;
+    margin-top: 80px; 
+    width: 100%;
+}
+/* ==========================================================================
+   İLETİŞİM BÖLÜMÜ VE FOOTER'I EN DİBE SABİTLEME DÜZENİ
+   ========================================================================= */
+
+/* İletişim bölümünü dikey bir esnek kutuya (Flexbox) çeviriyoruz */
+#contact {
+    min-height: 100vh; /* Ekranın tamamını kaplamasını garanti eder */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-bottom: 40px; /* En altta küçük bir nefes alma payı */
+}
+
+/* İletişim butonlarının altındaki boşluğu dengeliyoruz */
+.premium-contact-grid-cyber {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+#contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Butonları dikeyde tam ortalar, footer olmadığı için en temizi bu */
+    align-items: center;
+    position: relative;
+}
+
+.premium-contact-grid-cyber {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
