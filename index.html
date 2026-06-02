@@ -3,162 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Soyad | Systems & Design Portfolio</title>
+    <title>Nisa Nur Doğan | Full-Stack Geliştirici & UI/UX Tasarımcı</title>
+
+    <meta name="description" content="Nisa Nur Doğan'ın full-stack web, mobil uygulama ve UI/UX odaklı yazılım projelerini içeren kişisel portfolyo sitesi.">
+    <meta name="keywords" content="Full-Stack Developer, Frontend, React Native, PHP, MySQL, Node.js, UI UX, Portfolio">
+    <meta name="author" content="Nisa Nur Doğan">
+
+    <meta property="og:title" content="Nisa Nur Doğan Portfolio">
+    <meta property="og:description" content="Full-stack web geliştirme, mobil programlama ve kullanıcı deneyimi odaklı teknik projeler.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="assets/favicon.png">
+
+    <!-- FontAwesome İkon Kütüphanesi (CV butonlarındaki ok sembolleri için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="ambient-glow orb-lila"></div>
-    <div class="ambient-glow orb-silver"></div>
+    <div class="premium-grid-bg"></div>
+    <div class="aurora-glow-left"></div>
+    <div class="aurora-glow-right"></div>
+    <div class="aurora-glow-center"></div>
 
-    <header class="main-header">
-        <a href="#hero-slide" class="cyber-logo dynamic-flicker">AS<span>.</span></a>
-        <nav class="top-nav">
-            <a href="#about">Hakkımda</a>
-            <a href="#projects">Projeler</a>
-            <a href="#skills">Yetkinlikler</a>
-            <a href="#cv">Dokümanlar</a>
-            <a href="#contact">İletişim</a>
-        </nav>
+    <!-- PREMIUM SPLASH GİRİŞ EKRANI -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <span class="splash-welcome">// PORTFOLYO ALANI</span>
+            <h1 class="splash-title">Merhaba, Ben <span class="splash-name">Nisa Nur Doğan</span></h1>
+            <p class="splash-subtitle">Bilgisayar Programcılığı Öğrencisi & Full-Stack Geliştirici</p>
+        </div>
+    </div>
+
+    <nav class="global-nav">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-title">NND</a>
+            <div class="nav-links">
+                <a href="#about">Hakkımda</a>
+                <a href="#projects">Projeler</a>
+                <a href="#skills">Yetenekler</a>
+                <a href="#contact">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-premium">
+        <div class="page-container">
+            <div class="hero-glass-card hero-reveal">
+                <span class="architecture-tag">// WEB VE MOBİL GELİŞTİRME • ARAYÜZ TASARIMI</span>
+                <h1 class="hero-title">
+                    İşlevsel Kodlar<br>
+                    <span class="silver-gradient">Sade Arayüzler Tasarlıyorum.</span>
+                </h1>
+                <p class="hero-desc">
+                    İzmir Ekonomi Üniversitesi Bilgisayar Programcılığı öğrencisiyim. 
+                   Bilgisayar Programcılığı öğrencisi olarak web ve mobil platformlarda projeler geliştiriyorum. Backend süreçlerini PHP ve veritabanı mimarileriyle çözerken,
+                frontend tasarımlarında karmaşadan uzak, işlevsel ve sade bir deneyim sunmayı hedefliyorum."
+                </p>
+                <div class="hero-action-row">
+                    <a href="#projects" class="btn-main-silver">Projelerimi İncele</a>
+                    <a href="#contact" class="btn-main-outline">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section id="hero-slide" class="slide-section">
-        <div class="slide-content-center">
-            <span class="slide-num">// SLOT_01</span>
-            <h1 class="main-title dynamic-flicker">Sistem Analizi <br>ve Tasarımı</h1>
-            <p class="slide-subtitle">Mühendislik disipliniyle harmanlanmış lila ve platin yansımalı portfolyo.</p>
-            <div class="scroll-indicator">Aşağı Kaydır ↓</div>
-        </div>
-    </section>
-
-    <section id="about" class="slide-section padding-slide">
-        <div class="slide-grid-two">
-            <div class="slide-visual">
-                <div class="avatar-glow-wrapper">
-                    <img src="assets/profil.jpg" alt="Ad Soyad" class="slide-avatar">
-                </div>
-            </div>
-            <div class="slide-text-box">
-                <span class="slide-num">// SLOT_02 // KİMLİK</span>
-                <h2>Analiz ve Mimari</h2>
-                <div class="glass-slide-card">
-                    <p>Ben Ad Soyad. MBP 206 Sistem Analizi ve Tasarımı dersi kapsamında karmaşık iş süreçlerini dijital projelere dönüştürüyorum. Gereksinim analizi ve sistem optimizasyonu üzerine odaklanıyorum.</p>
-                    <p>Tasarımımda düz çizgilerden kaçınarak, teknolojinin dinamizmini lila neon ve fırçalanmış gümüş tonlarının asil birlikteliğiyle sergiliyorum.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="slide-section padding-slide alternate-bg">
-        <div class="slide-content-full">
-            <span class="slide-num">// SLOT_03 // REPO</span>
-            <h2 class="slide-heading-center">Geliştirilen Sistemler</h2>
-            <p class="slide-desc-center">Kaynak kodları ve analiz dökümanları GitHub üzerinde public olarak yayınlanan projeler:</p>
-            
-            <div class="slide-cards-grid">
-                <div class="slide-project-card shm-effect">
-                    <div class="card-neon-strip"></div>
-                    <div class="card-num">01</div>
-                    <h3>Sistem Analizi Dönem Projesi</h3>
-                    <p>Süreç analizi, UML modellemeleri ve fonksiyonel gereksinim dökümantasyonu akademik standartlarda hazırlanan projem.</p>
-                    <div class="card-tags"><span>Python</span><span>Jira</span><span>Git</span></div>
-                    <a href="https://github.com/kullaniciadi/donem-projesi-reposu" target="_blank" class="card-action-btn">Repoyu İncele →</a>
-                </div>
-
-                <div class="slide-project-card shm-effect">
-                    <div class="card-neon-strip"></div>
-                    <div class="card-num">02</div>
-                    <h3>E-Ticaret Veri Modelleme & RDBMS</h3>
-                    <p>Yüksek trafikli yapılar için optimize edilmiş ilişkisel veri tabanı tasarımı ve 3. Normal Form SQL sorgu optimizasyonları.</p>
-                    <div class="card-tags"><span>MySQL</span><span>Sistem Tasarımı</span></div>
-                    <a href="#" target="_blank" class="card-action-btn">Repoyu İncele →</a>
-                </div>
-
-                <div class="slide-project-card shm-effect">
-                    <div class="card-neon-strip"></div>
-                    <div class="card-num">03</div>
-                    <h3>Agile Görev Yönetim Paneli</h3>
-                    <p>Scrum ve Kanban prensiplerine uygun olarak tasarlanmış, takımların iş takibini kolaylaştıran web mimarisi.</p>
-                    <div class="card-tags"><span>JavaScript</span><span>HTML/CSS</span></div>
-                    <a href="#" target="_blank" class="card-action-btn">Repoyu İncele →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="slide-section padding-slide">
-        <div class="slide-content-full">
-            <span class="slide-num">// SLOT_04 // YETENEK</span>
-            <h2 class="slide-heading-center">Teknoloji Matrisi</h2>
-            
-            <div class="slide-skills-container">
-                <div class="slide-skill-box shm-effect">
-                    <div class="box-line lila-line"></div>
-                    <h3>Teknik Araç Seti</h3>
-                    <ul>
-                        <li>Python, JavaScript, SQL, HTML, CSS</li>
-                        <li>Git, GitHub, Jira, Figma, LucidChart</li>
-                    </ul>
-                </div>
-                <div class="slide-skill-box shm-effect">
-                    <div class="box-line silver-line"></div>
-                    <h3>Sosyal & Profesyonel</h3>
-                    <ul>
-                        <li>Sistem Analizi, Gereksinim Yönetimi</li>
-                        <li>Teknik Raporlama, Etkili Sunum, Takım Çalışması</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cv" class="slide-section padding-slide alternate-bg">
-        <div class="slide-content-full">
-            <span class="slide-num">// SLOT_05 // DOKÜMAN</span>
-            <h2 class="slide-heading-center">Kurumsal Arşiv</h2>
-            <p class="slide-desc-center">İK uzmanları için hazırlanmış, iki dilde paralel işleyen güncel dökümanlar:</p>
-            
-            <div class="slide-cv-container">
-                <a href="assets/cv-tr.pdf" download class="slide-cv-tile shm-effect">
-                    <div class="tile-icon">📄</div>
-                    <div class="tile-details">
-                        <h4>Türkçe Özgeçmiş</h4>
-                        <span>PDF Formatında İndir</span>
+    <section id="about" class="about-asymmetric-section scroll-reveal">
+        <div class="page-container">
+            <div class="about-grid">
+                <div class="about-title-wrapper">
+                    <div class="section-header-line" style="margin-bottom: 0;">
+                        <span class="section-index">01 // KİŞİSEL PROFİL</span>
+                        <h2 class="section-main-heading">Hakkımda</h2>
                     </div>
-                    <span class="tile-arrow">↓</span>
-                </a>
-                
-                <a href="assets/cv-en.pdf" download class="slide-cv-tile shm-effect lila-border">
-                    <div class="tile-icon">🇬🇧</div>
-                    <div class="tile-details">
-                        <h4>English Resume</h4>
-                        <span>Download PDF Specification</span>
-                    </div>
-                    <span class="tile-arrow">↓</span>
-                </a>
+                </div>
+                <div class="about-content">
+                    <p>
+    Merhaba, ben <span class="about-highlight">Nisa Nur Doğan</span>. Geliştirme süreçlerimde sadece kod yazmaya değil, son kullanıcının karşılaştığı <span class="about-highlight">görsel estetiğe</span>, renk uyumuna ve arayüzün göz yormayan bir düzende olmasına önem veriyorum.
+</p>
+<p>
+    Lise yıllarından beri süregelen bilişim yolculuğumu, şu an <span class="about-highlight">İzmir Ekonomi Üniversitesi Bilgisayar Programcılığı</span> programında sürdürüyorum. Eğitimim boyunca teknik kodlama temellerini, grafik tasarım ve modern arayüz (UI/UX) prensipleriyle birleştiren işlevsel projeler tasarlamaya gayret ettim.
+</p>
+<p>
+    Mobil ve web platformlarında <span class="about-highlight">React Native</span> ve PHP/MySQL kullanırken, kullanıcı dostu yerleşimler ve sade tasarım dilleri oluşturmayı seviyorum. Adobe Illustrator gibi araçlarla dijital varlıklar üretmekten keyif alıyor, projelerimde teknik işlevsellik ile görsel zarafeti dengede tutmayı hedefliyorum.
+</p>
+                </div>
             </div>
         </div>
     </section>
 
-  <section id="contact" class="slide-section padding-slide">
-        <div class="slide-content-full">
-            <span class="slide-num">// SLOT_06 // BAĞLANTI</span>
-            <h2 class="slide-heading-center">Sistem Bağlantısı</h2>
-            
-            <div class="slide-contact-grid">
-                <a href="mailto:eposta@adresiniz.com" class="slide-contact-button">
-                    <span class="c-icon">✉️</span> eposta@adresiniz.com
-                </a>
-                <a href="https://linkedin.com/in/kullaniciadi" target="_blank" class="slide-contact-button">
-                    <span class="c-icon">🔗</span> LinkedIn
-                </a>
-                <a href="https://github.com/kullaniciadi" target="_blank" class="slide-contact-button">
-                    <span class="c-icon">🐙</span> GitHub
-                </a>
+    <section id="projects" class="section-block scroll-reveal">
+        <div class="page-container">
+            <div class="section-header-line">
+                <span class="section-index">02 // PROJE GEÇMİŞİ</span>
+                <h2 class="section-main-heading">Geliştirdiğim Projeler</h2>
             </div>
+
+            <div class="premium-matrix-grid">
+                <!-- PROJE 1: Tarım Rehberi -->
+                <div class="executive-card">
+                    <div>
+                        <div class="card-meta-line">
+                            <span class="tech-tag">Node.js + SQLite</span>
+                            <span class="status-indicator">Backend API</span>
+                        </div>
+                        <h3>Tarım Rehberi Uygulaması</h3>
+                        <p>
+                            Çiftçilerin günlük süreçlerini kolaylaştırmak amacıyla geliştirdiğim backend projesi. 
+                            Express framework'ü ve ilişkisel SQLite veritabanı mimarisi üzerine kurulu bu çalışmada; 
+                            şehir bazlı toprak, iklim, yağış analizi sunan performanslı API end-point'leri ve okunabilir veri akışı üzerine yoğunlaştım.
+                        </p>
+                    </div>
+                    <a href="https://github.com/nisanur-dogan/tarim-rehberi-uygulamasi" target="_blank" class="card-action-trigger">GitHub Reposunu İncele →</a>
+                </div>
+
+                <!-- PROJE 2: Takı Sipariş Web Sitesi -->
+                <div class="executive-card">
+                    <div>
+                        <div class="card-meta-line">
+                            <span class="tech-tag">PHP + JSON</span>
+                            <span class="status-indicator">E-Ticaret Sistemi</span>
+                        </div>
+                        <h3>Takı Sipariş Web Sitesi</h3>
+                        <p>
+                            Kullanıcı deneyimi odaklı geliştirdiğim dinamik e-ticaret projesi. 
+                            Sepet sistemi, ürün yönetimi ve asenkron veri işlemlerini PHP ve modüler JSON dosya yapısı ile geliştirirken; 
+                            özel renk tonları, modern tipografi ve temiz arayüz yaklaşımıyla estetik bir deneyim oluşturdum.
+                        </p>
+                    </div>
+                    <a href="https://github.com/nisanur-dogan/taki-siparis-sitesi" target="_blank" class="card-action-trigger">GitHub Reposunu İncele →</a>
+                </div>
+
+                <!-- PROJE 3: Yakında Ne Var? İşletme Rehberi -->
+                <div class="executive-card">
+                    <div>
+                        <div class="card-meta-line">
+                            <span class="tech-tag">PHP + MySQL</span>
+                            <span class="status-indicator">Full-Stack Rehber</span>
+                        </div>
+                        <h3>Yakında Ne Var? İşletme Rehberi</h3>
+                        <p>
+                            Esnaf ve kurumsal işletmelerin şehir, ilçe ve sektör kategorilerine göre dinamik olarak listelenmesini sağlayan dijital rehber platformu. 
+                            MySQL ve phpMyAdmin tabanlı ilişkisel SQL sorguları, güvenli admin paneli ve gelişmiş filtreleme algoritmaları kullanarak esnek bir mimari inşa ettim.
+                        </p>
+                    </div>
+                    <a href="https://github.com/nisanur-dogan/yakinda-ne-var-rehber" target="_blank" class="card-action-trigger">GitHub Reposunu İncele →</a>
+                </div>
+
+                <!-- PROJE 4: LUX Restoran Otomasyonu -->
+                <div class="executive-card">
+                    <div>
+                        <div class="card-meta-line">
+                            <span class="tech-tag">Vanilla JS + LocalStorage</span>
+                            <span class="status-indicator">Otomasyon Sistemi</span>
+                        </div>
+                        <h3>LUX Restoran Otomasyonu</h3>
+                        <p>
+                            Restoranlar için tasarlanmış çift katmanlı oturum yalıtımına, 15 masalık interaktif yerleşim planına ve zaman damgalı sipariş takip mekanizmasına sahip; web storage kalıcı veri mimarili saf JavaScript adisyon yönetim sistemidir.
+                        </p>
+                    </div>
+                    <a href="https://github.com/nisanur-dogan/garson-masa-takip" target="_blank" class="card-action-trigger">GitHub Reposunu İncele →</a>
+                </div>
             </div>
+        </div>
     </section>
 
+    <section id="skills" class="skills-wave-section scroll-reveal">
+        <div class="skills-container">
+            
+            <div class="stack-block">
+                <h2 class="skills-main-title">TEKNİK YETKİNLİKLER</h2>
+                <div class="skills-matrix-grid">
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">Js</div>
+                        <span class="skill-name">HTML, CSS, JavaScript</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">Ph</div>
+                        <span class="skill-name">Python & PHP</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">No</div>
+                        <span class="skill-name">Node.js Geliştirme</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">Jv</div>
+                        <span class="skill-name">Java (OOP Temelleri)</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">C#</div>
+                        <span class="skill-name">C# Programlama</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-purple">Ms</div>
+                        <span class="skill-name">MS SQL Server</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-block" style="margin-bottom: 0;">
+                <h2 class="skills-main-title" style="margin-top: 20px;">TASARIM &amp; DİJİTAL BECERİLER</h2>
+                <div class="skills-matrix-grid">
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">Rn</div>
+                        <span class="skill-name">React Native</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">As</div>
+                        <span class="skill-name">Android Studio</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">Ai</div>
+                        <span class="skill-name">Adobe Illustrator</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">Sm</div>
+                        <span class="skill-name">Sosyal Medya Yönetimi</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">Kc</div>
+                        <span class="skill-name">Kuika (Low-code)</span>
+                    </div>
+                    <div class="skill-row-item">
+                        <div class="skill-prefix-box accent-white">Ue</div>
+                        <span class="skill-name">Unreal Engine</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="luxury-contact-section scroll-reveal">
+        <div class="page-container">
+            <div class="footer-container">
+                <h2 class="footer-main-title">Birlikte Çalışalım.</h2>
+                <p class="footer-sub-text">
+                    Projelerim ve tasarım çalışmalarım veya yazılım geliştirme süreçleri hakkında konuşmak isterseniz benimle iletişime geçebilirsiniz.
+                    
+                </p>
+
+                <div class="modern-social-grid">
+                    <a href="mailto:nisanrdgn1006@gmail.com" class="social-box-card">
+                        <span class="social-title">E-Posta</span>
+                        <span class="social-sub">Doğrudan İletişim</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nisanur-do%C4%9Fan/" target="_blank" class="social-box-card">
+                        <span class="social-title">LinkedIn</span>
+                        <span class="social-sub">Profesyonel Ağ</span>
+                    </a>
+                    <a href="https://github.com/nisanur-dogan" target="_blank" class="social-box-card">
+                        <span class="social-title">GitHub</span>
+                        <span class="social-sub">Kod Depolarım</span>
+                    </a>
+                </div>
+
+                <div class="cv-download-flex">
+                    <a href="ozgecmis.pdf" target="_blank" class="btn-cv-download">
+                        ÖZGEÇMİŞ (TR) <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+                    </a>
+                    <a href="resume.pdf" target="_blank" class="btn-cv-download">
+                        RESUME (EN) <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const splash = document.getElementById("splash-screen");
+            
+            // Scroll Reveal Animasyon Dinleyicisi
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            const revealOnScroll = () => {
+                reveals.forEach(reveal => {
+                    const windowHeight = window.innerHeight;
+                    const revealTop = reveal.getBoundingClientRect().top;
+                    const revealPoint = 150;
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            if (splash) {
+                const closeSplash = () => {
+                    if (!splash.classList.contains("fade-out")) {
+                        splash.classList.add("fade-out");
+                        
+                        // 2 saniyelik solma animasyonu bittiğinde kilidi kaldırır ve kaydırma efektlerini açar
+                        setTimeout(() => {
+                            document.body.style.overflow = "auto";
+                            revealOnScroll();
+                        }, 2000);
+                        
+                        window.removeEventListener("wheel", closeSplash);
+                        window.removeEventListener("touchstart", closeSplash);
+                        window.removeEventListener("keydown", closeSplash);
+                    }
+                };
+
+                document.body.style.overflow = "hidden";
+
+                window.addEventListener("wheel", closeSplash, { passive: true });
+                window.addEventListener("touchstart", closeSplash, { passive: true });
+                window.addEventListener("keydown", closeSplash, { passive: true });
+            }
+
+            // Sayfa içi kaydırmalarda da animasyonları dinle
+            window.addEventListener('scroll', revealOnScroll);
+        });
+    </script>
 </body>
 </html>
